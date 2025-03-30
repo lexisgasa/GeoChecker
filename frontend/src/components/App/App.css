@@ -1,0 +1,13 @@
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
