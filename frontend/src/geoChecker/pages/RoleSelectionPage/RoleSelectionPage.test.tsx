@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import RoleSelectionPage from "./RoleSelectionPage";
-import { renderWithRouter } from "../../../test-utils";
+import { renderWithRouter } from "../../../render-utils";
 
 describe("Given the Main component", () => {
   describe("When it is rendered", () => {
