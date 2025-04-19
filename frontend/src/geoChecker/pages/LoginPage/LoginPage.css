@@ -1,0 +1,9 @@
+.admin-link {
+  color: var(--main);
+
+  &:hover {
+    text-decoration: underline;
+
+  }
+}
+
