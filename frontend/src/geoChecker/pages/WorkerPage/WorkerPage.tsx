@@ -1,6 +1,6 @@
 import Actions from "../../components/Actions/Actions";
 import { ActionType } from "../../types";
-import "./WorkerPage.css";
+import "../../../styles/styles.css";
 
 const WorkerPage = () => {
   const actions: ActionType[] = [
