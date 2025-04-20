@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound/NotFound";
 import LoginPage from "../../geoChecker/pages/LoginPage/LoginPage";
 import WorkerPage from "../../geoChecker/pages/WorkerPage/WorkerPage";
 import ContactPage from "../../geoChecker/pages/ContactPage/ContactPage";
+import SupervisorPage from "../../geoChecker/pages/SupervisorPage/SupervisorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route index element={<RoleSelectionPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="worker" element={<WorkerPage />} />
+      <Route path="supervisor" element={<SupervisorPage />} />
       <Route path="contact" element={<ContactPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>
