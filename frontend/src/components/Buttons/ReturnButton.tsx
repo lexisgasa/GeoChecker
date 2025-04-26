@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import "./ReturnButton.css";
 
 const ReturnButton = (): React.ReactElement => {
   const navigate = useNavigate();

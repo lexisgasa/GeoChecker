@@ -1,38 +1,27 @@
 .login-form {
-    background-color: var(--bright);
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-
+  background-color: var(--bright);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
 }
 
-  .login-button,
-  .back-button {
-    flex: 1;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button {
-    color: var(--bright);
-    background-color: var(--main);
-    
-    &:hover {
-      background-color: var(--main-hover);
-    }
-  }
-  
-  .back-button {
-    background-color: var(--grey);
-    color: var(--bright);
-    
-    &:hover {
-      background-color: var(--grey-hover);
-    }
-  }
+.login-button,
+.back-button {
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
 
+.login-button {
+  color: var(--bright);
+  background-color: var(--main);
+
+  &:hover {
+    background-color: var(--main-hover);
+  }
+}
 
 .help-section {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }

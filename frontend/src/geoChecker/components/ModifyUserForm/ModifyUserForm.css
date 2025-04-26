@@ -6,3 +6,12 @@
   width: 100%;
   max-width: 600px;
 }
+
+.modify-button {
+  background-color: var(--main);
+  color: white;
+
+  &:hover {
+    background-color: var(--main-hover);
+  }
+}

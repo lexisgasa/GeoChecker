@@ -7,17 +7,10 @@
   max-width: 600px;
 }
 
-
-.create-button,
-.back-button {
-  flex: 1;
-  transition: background-color 0.3s ease;
-}
-
 .create-button {
   color: var(--bright);
   background-color: var(--main);
-  
+
   &:hover {
     background-color: var(--main-hover);
   }
