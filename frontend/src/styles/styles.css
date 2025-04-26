@@ -44,6 +44,7 @@ button {
   border-radius: 6px;
   padding: 0.75rem;
   font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .nav-link {
@@ -67,6 +68,15 @@ button {
   width: 100%;
   gap: 1.5rem;
   margin-bottom: 12px;
+}
+
+.general-form {
+  background-color: var(--bright);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
 }
 
 .form-group {
@@ -119,13 +129,13 @@ button {
   margin-top: 2rem;
 }
 
-.submit-button,
-.create-button,
-.delete-button,
-.back-button {
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.action-button {
+  color: var(--bright);
+  background-color: var(--main);
+
+  &:hover {
+    background-color: var(--main-hover);
+  }
 }
 
 .delete-button {
