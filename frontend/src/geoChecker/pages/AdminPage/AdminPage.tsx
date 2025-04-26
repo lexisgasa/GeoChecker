@@ -1,11 +1,12 @@
 import Actions from "../../components/Actions/Actions";
 import { ActionType } from "../../types";
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 import "../../../styles/styles.css";
 
 const AdminPage = () => {
   const actions: ActionType[] = [
-    { id: 1, name: "Usuarios", path: "/users" },
-    { id: 2, name: "Empresas", path: "/companies" },
+    { id: 1, name: "Usuarios", path: "/admin-users" },
+    { id: 2, name: "Empresas", path: "/admin-companies" },
   ];
 
   return (
@@ -17,6 +18,7 @@ const AdminPage = () => {
           <Actions key={action.id} {...action} />
         ))}
       </ul>
+      <ReturnButton />
     </>
   );
 };
