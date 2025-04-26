@@ -11,7 +11,7 @@ const CreateUser = (): React.ReactElement => {
 
   return (
     <>
-      {/* // TODO: breadcrumbs */}
+      {/* // TODO: breadcrumbs react-tostify */}
       <h1>Crear usuario</h1>
       <CreateUserForm userData={userData} setUserData={setUserData} />
     </>
