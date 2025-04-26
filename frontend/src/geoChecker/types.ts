@@ -9,6 +9,10 @@ export interface UserData {
   password: string;
 }
 
+export interface ModifyUserData {
+  userId: string;
+}
+
 export interface ContactFormData {
   username: string;
   description: string;

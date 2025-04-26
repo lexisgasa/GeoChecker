@@ -82,7 +82,7 @@ describe("Given the component CreateUserForm", () => {
     });
   });
 
-  describe("When the user types 'Contraseña123' in 'Introduce la contraseña'", () => {
+  describe("When the user types 'Contraseña123' in 'Introduce la contraseña' field", () => {
     test("Then it should display 'Contraseña123' inside the field", async () => {
       const passwordFieldText = /introduce la contraseña/i;
 

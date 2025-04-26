@@ -13,6 +13,7 @@ import SupervisorPage from "../../geoChecker/pages/SupervisorPage/SupervisorPage
 import AdminPage from "../../geoChecker/pages/AdminPage/AdminPage";
 import AdminPageUserActions from "../../geoChecker/pages/AdminPageUserActions/AdminPageUserActions";
 import CreateUser from "../../geoChecker/pages/CreateUser/CreateUser";
+import ModifyUser from "../../geoChecker/pages/ModifyUser/ModifyUser";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="admin" element={<AdminPage />} />
       <Route path="admin-users" element={<AdminPageUserActions />} />
       <Route path="create-user" element={<CreateUser />} />
+      <Route path="modify-user" element={<ModifyUser />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
