@@ -12,17 +12,19 @@ import ContactPage from "../../geoChecker/pages/ContactPage/ContactPage";
 import SupervisorPage from "../../geoChecker/pages/SupervisorPage/SupervisorPage";
 import AdminPage from "../../geoChecker/pages/AdminPage/AdminPage";
 import AdminPageUserActions from "../../geoChecker/pages/AdminPageUserActions/AdminPageUserActions";
+import CreateUser from "../../geoChecker/pages/CreateUser/CreateUser";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<RoleSelectionPage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="contact" element={<ContactPage />} />
       <Route path="worker" element={<WorkerPage />} />
       <Route path="supervisor" element={<SupervisorPage />} />
       <Route path="admin" element={<AdminPage />} />
       <Route path="admin-users" element={<AdminPageUserActions />} />
-      <Route path="contact" element={<ContactPage />} />
+      <Route path="create-user" element={<CreateUser />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )

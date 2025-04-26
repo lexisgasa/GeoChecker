@@ -1,0 +1,24 @@
+.create-user-form {
+  background-color: var(--bright);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.create-button,
+.back-button {
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
+
+.create-button {
+  color: var(--bright);
+  background-color: var(--main);
+  
+  &:hover {
+    background-color: var(--main-hover);
+  }
+}

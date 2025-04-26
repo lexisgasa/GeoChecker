@@ -14,6 +14,12 @@ export interface ContactFormData {
   description: string;
 }
 
+export interface UserFullData {
+  company: string;
+  name: string;
+  password: string;
+}
+
 export interface ActionType {
   id: number;
   name: string;
