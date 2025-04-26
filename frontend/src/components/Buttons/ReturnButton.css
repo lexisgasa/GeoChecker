@@ -1,0 +1,8 @@
+.back-button {
+  background-color: var(--grey);
+  color: white;
+
+  &:hover {
+    background-color: var(--grey-hover);
+  }
+}
