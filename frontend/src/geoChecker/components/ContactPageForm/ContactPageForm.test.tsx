@@ -3,7 +3,7 @@ import { renderWithRouter } from "../../../render-utils";
 import ContactPageForm from "./ContactPageForm";
 import userEvent from "@testing-library/user-event";
 
-describe("Given the component ConactPageForm", () => {
+describe("Given the component ContactPageForm", () => {
   beforeEach(() => {
     renderWithRouter(<ContactPageForm />);
   });
