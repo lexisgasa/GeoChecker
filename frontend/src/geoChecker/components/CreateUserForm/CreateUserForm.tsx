@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { UserFullData } from "../../types";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
-import "./CreateUserForm.css";
 
 interface CreateUserDataProps {
   userData: UserFullData;
@@ -36,7 +35,7 @@ export default function CreateUserForm({
   return (
     <form onSubmit={handleCreateUser} className="create-user-form">
       <div className="form-group">
-        <label htmlFor="company">Introduce la empresa</label>
+        <label htmlFor="company">Nombre de empresa</label>
         <input
           type="text"
           id="company"
@@ -46,7 +45,7 @@ export default function CreateUserForm({
         />
       </div>
       <div className="form-group">
-        <label htmlFor="name">Introduce el nombre</label>
+        <label htmlFor="name">Nombre de usuario</label>
         <input
           type="text"
           id="name"
@@ -56,7 +55,7 @@ export default function CreateUserForm({
         />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Introduce la contraseña</label>
+        <label htmlFor="password">Contraseña</label>
         <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}
@@ -106,7 +105,7 @@ export default function CreateUserForm({
         </div>
       </div>
       <div className="button-group">
-        <button type="submit" className="create-button">
+        <button type="submit" className="action-button">
           Crear
         </button>
         <ReturnButton />

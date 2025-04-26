@@ -30,12 +30,10 @@ describe("Given the component CreateUserForm", () => {
   });
 
   describe("When it is rendered", () => {
-    test("Then it should show the fields 'Empresa', 'Nombre' and 'Contraseña'", () => {
-      const companyFieldText = screen.getByLabelText(/introduce la empresa/i);
-      const nameFieldText = screen.getByLabelText(/introduce el nombre/i);
-      const passwordFieldText = screen.getByLabelText(
-        /introduce la contraseña/i
-      );
+    test("Then it should show the fields 'Nombre de empresa', 'Nombre de usuario' and 'Contraseña'", () => {
+      const companyFieldText = screen.getByLabelText(/nombre de empresa/i);
+      const nameFieldText = screen.getByLabelText(/nombre de usuario/i);
+      const passwordFieldText = screen.getByLabelText(/Contraseña/i);
 
       expect(companyFieldText).toBeInTheDocument();
       expect(nameFieldText).toBeInTheDocument();
@@ -58,9 +56,9 @@ describe("Given the component CreateUserForm", () => {
     });
   });
 
-  describe("When the user types 'Tech' in 'Introduce la empresa' field", () => {
+  describe("When the user types 'Tech' in 'Nombre de empresa' field", () => {
     test("Then it should display 'Tech' inside the field", async () => {
-      const companyFieldText = /introduce la empresa/i;
+      const companyFieldText = /nombre de empresa/i;
 
       const companyField = screen.getByLabelText(companyFieldText);
 
@@ -70,9 +68,9 @@ describe("Given the component CreateUserForm", () => {
     });
   });
 
-  describe("When the user types 'Alex' in 'Introduce el nombre' field", () => {
+  describe("When the user types 'Alex' in 'Nombre de usuario' field", () => {
     test("Then it should display 'Alex' inside the field", async () => {
-      const nameFieldText = /introduce el nombre/i;
+      const nameFieldText = /nombre de usuario/i;
 
       const nameField = screen.getByLabelText(nameFieldText);
 
@@ -82,9 +80,9 @@ describe("Given the component CreateUserForm", () => {
     });
   });
 
-  describe("When the user types 'Contraseña123' in 'Introduce la contraseña' field", () => {
+  describe("When the user types 'Contraseña123' in 'Contraseña' field", () => {
     test("Then it should display 'Contraseña123' inside the field", async () => {
-      const passwordFieldText = /introduce la contraseña/i;
+      const passwordFieldText = /contraseña/i;
 
       const passwordField = screen.getByLabelText(passwordFieldText);
 
@@ -96,7 +94,7 @@ describe("Given the component CreateUserForm", () => {
 
   describe("When the user clicks the show/hide password button", () => {
     test("Then it should toggle the password field visibility", async () => {
-      const passwordFieldText = /introduce la contraseña/i;
+      const passwordFieldText = /contraseña/i;
       const toggleButtonText = /show password/i;
 
       const passwordField = screen.getByLabelText(passwordFieldText);

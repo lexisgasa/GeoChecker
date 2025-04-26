@@ -27,10 +27,10 @@ describe("Given the component ModifyUserForm", () => {
     renderWithRouter(<Wrapper />);
   });
 
-  const userIdFieldText = /introduce el id de usuario/i;
+  const userIdFieldText = /id/i;
 
   describe("When it is rendered", () => {
-    test("Then it should show the field 'Introduce el id de usuario'", () => {
+    test("Then it should show the field 'id'", () => {
       const userIdField = screen.getByLabelText(userIdFieldText);
 
       expect(userIdField).toBeInTheDocument();
@@ -52,7 +52,7 @@ describe("Given the component ModifyUserForm", () => {
     });
   });
 
-  describe("When the user types the user ID 'User123' in 'Introduce el id de usuario' field", () => {
+  describe("When the user types the user ID 'User123' in 'id' field", () => {
     test("Then it should display 'User123' in the field", async () => {
       const userIdField = screen.getByLabelText(userIdFieldText);
 

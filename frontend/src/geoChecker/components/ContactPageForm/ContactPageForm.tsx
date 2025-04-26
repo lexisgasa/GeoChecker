@@ -47,7 +47,7 @@ export default function ContactPageForm() {
         />
       </div>
       <div className="button-group">
-        <button type="submit" className="submit-button">
+        <button type="submit" className="action-button">
           Enviar
         </button>
         <ReturnButton />

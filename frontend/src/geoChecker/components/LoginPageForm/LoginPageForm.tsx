@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { UserData } from "../../types";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
-import "./LoginPageForm.css";
 
 interface UserDataProps {
   userData: {
@@ -37,7 +36,7 @@ export default function LoginPageForm({
   };
 
   return (
-    <form onSubmit={handleLogin} className="login-form">
+    <form onSubmit={handleLogin}>
       <div className="form-group">
         <label htmlFor="username">Usuario</label>
         <input
@@ -99,7 +98,7 @@ export default function LoginPageForm({
         </div>
       </div>
       <div className="button-group">
-        <button type="submit" className="login-button">
+        <button type="submit" className="action-button">
           Iniciar sesión
         </button>
         <ReturnButton />

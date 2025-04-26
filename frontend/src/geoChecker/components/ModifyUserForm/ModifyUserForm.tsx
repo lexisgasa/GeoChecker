@@ -1,6 +1,5 @@
 import ReturnButton from "../../../components/Buttons/ReturnButton";
 import { ModifyUserData } from "../../types";
-import "./ModifyUserForm.css";
 
 interface ModifyUserDataProps {
   userData: ModifyUserData;
@@ -29,7 +28,7 @@ export default function ModifyUserForm({
   return (
     <form onSubmit={handleDeleteUser} className="modify-user-form">
       <div className="form-group">
-        <label htmlFor="userId">Introduce el id de usuario</label>
+        <label htmlFor="userId">ID</label>
         <input
           type="number"
           id="userId"
@@ -39,7 +38,7 @@ export default function ModifyUserForm({
         />
       </div>
       <div className="button-group">
-        <button type="submit" className="modify-button">
+        <button type="submit" className="action-button">
           Modificar
         </button>
         <ReturnButton />

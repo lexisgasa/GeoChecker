@@ -33,9 +33,9 @@ export default function ModifyUserNewDataForm({
   };
 
   return (
-    <form onSubmit={handleUpdateUser} className="general-form">
+    <form onSubmit={handleUpdateUser}>
       <div className="form-group">
-        <label htmlFor="name">Introduce el nuevo nombre</label>
+        <label htmlFor="name">Nombre</label>
         <input
           type="text"
           id="name"
@@ -45,7 +45,7 @@ export default function ModifyUserNewDataForm({
         />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Introduce la nueva contraseña</label>
+        <label htmlFor="password">Contraseña</label>
         <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}
@@ -95,7 +95,7 @@ export default function ModifyUserNewDataForm({
         </div>
       </div>
       <div className="form-group">
-        <label htmlFor="company">Introduce la nueva empresa</label>
+        <label htmlFor="company">Empresa</label>
         <input
           type="text"
           id="company"

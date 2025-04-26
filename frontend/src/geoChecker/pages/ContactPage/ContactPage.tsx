@@ -4,7 +4,7 @@ const ContactPage = () => {
   return (
     <>
       <h2>Contactar Administrador</h2>
-      <div className="contact-content">
+      <div className="general-form">
         <p>
           Si estás teniendo problemas para acceder al sistema, por favor
           contacta al administrador:

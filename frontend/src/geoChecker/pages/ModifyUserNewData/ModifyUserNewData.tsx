@@ -12,7 +12,10 @@ const ModifyUserNewData = (): React.ReactElement => {
   return (
     <>
       <h1>Modificar Usuario</h1>
-      <ModifyUserNewDataForm userData={userData} setUserData={setUserData} />
+      <div className="general-form">
+        <p>Introduce los nuevos datos</p>
+        <ModifyUserNewDataForm userData={userData} setUserData={setUserData} />
+      </div>
     </>
   );
 };
