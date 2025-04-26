@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { UserFullData } from "../../types";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
+import { UserFullData } from "../../types";
 
-interface CreateUserDataProps {
+interface ModifyUserNewDataProps {
   userData: UserFullData;
   setUserData: React.Dispatch<React.SetStateAction<UserFullData>>;
 }
 
-export default function CreateUserForm({
+export default function ModifyUserNewDataForm({
   userData,
   setUserData,
-}: CreateUserDataProps) {
+}: ModifyUserNewDataProps) {
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleCreateUser = async (event: React.FormEvent) => {
+  const handleUpdateUser = async (event: React.FormEvent) => {
     event.preventDefault();
     // TODO Implementar la logica
-    console.log("User creation data:", userData);
+    console.log("User update data:", userData);
   };
 
   const handleUserData = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -33,19 +33,9 @@ export default function CreateUserForm({
   };
 
   return (
-    <form onSubmit={handleCreateUser} className="create-user-form">
+    <form onSubmit={handleUpdateUser}>
       <div className="form-group">
-        <label htmlFor="company">Nombre de empresa</label>
-        <input
-          type="text"
-          id="company"
-          value={userData.company}
-          onChange={handleUserData}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="name">Nombre de usuario</label>
+        <label htmlFor="name">Nombre</label>
         <input
           type="text"
           id="name"
@@ -104,9 +94,19 @@ export default function CreateUserForm({
           </button>
         </div>
       </div>
+      <div className="form-group">
+        <label htmlFor="company">Empresa</label>
+        <input
+          type="text"
+          id="company"
+          value={userData.company}
+          onChange={handleUserData}
+          required
+        />
+      </div>
       <div className="button-group">
         <button type="submit" className="action-button">
-          Crear
+          Actualizar
         </button>
         <ReturnButton />
       </div>

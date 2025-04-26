@@ -13,7 +13,10 @@ const CreateUser = (): React.ReactElement => {
     <>
       {/* // TODO: breadcrumbs react-tostify */}
       <h1>Crear usuario</h1>
-      <CreateUserForm userData={userData} setUserData={setUserData} />
+      <div className="general-form">
+        <p>Introduce los siguientes datos para registrar tu cuenta</p>
+        <CreateUserForm userData={userData} setUserData={setUserData} />
+      </div>
     </>
   );
 };

@@ -3,7 +3,9 @@
 
   &:hover {
     text-decoration: underline;
-
   }
 }
 
+.help-section {
+  margin-top: 3rem;
+}
