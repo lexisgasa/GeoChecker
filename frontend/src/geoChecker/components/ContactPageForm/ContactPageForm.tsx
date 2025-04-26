@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router";
 import { ContactFormData } from "../../types";
 import { useState } from "react";
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 import "./ContactPageForm.css";
 
 export default function ContactPageForm() {
-  const navigate = useNavigate();
   const [contactFormData, setContactFormData] = useState<ContactFormData>({
     username: "",
     description: "",
@@ -51,13 +50,7 @@ export default function ContactPageForm() {
         <button type="submit" className="submit-button">
           Enviar
         </button>
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="back-button"
-        >
-          Volver
-        </button>
+        <ReturnButton />
       </div>
     </form>
   );

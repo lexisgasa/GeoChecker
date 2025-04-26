@@ -1,5 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import AdminPage from "./AdminPage";
+import { renderWithRouter } from "../../../render-utils";
 
 describe("Given the AdminPage component", () => {
   describe("When it is rendered", () => {
@@ -7,7 +8,7 @@ describe("Given the AdminPage component", () => {
       const usersActionText = /usuarios/i;
       const companiesActionText = /empresas/i;
 
-      render(<AdminPage />);
+      renderWithRouter(<AdminPage />);
 
       const usersAction = screen.getByRole("link", {
         name: usersActionText,

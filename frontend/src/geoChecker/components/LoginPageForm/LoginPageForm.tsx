@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { UserData } from "../../types";
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 import "./LoginPageForm.css";
 
 interface UserDataProps {
@@ -15,7 +15,6 @@ export default function LoginPageForm({
   userData,
   setUserData,
 }: UserDataProps) {
-  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (event: React.FormEvent) => {
@@ -31,10 +30,6 @@ export default function LoginPageForm({
         [event.target.id]: event.target.value,
       };
     });
-  };
-
-  const handleBack = (): void => {
-    navigate(-1);
   };
 
   const togglePasswordVisibility = (): void => {
@@ -107,9 +102,7 @@ export default function LoginPageForm({
         <button type="submit" className="login-button">
           Iniciar sesión
         </button>
-        <button type="button" onClick={handleBack} className="back-button">
-          Volver
-        </button>
+        <ReturnButton />
       </div>
     </form>
   );
