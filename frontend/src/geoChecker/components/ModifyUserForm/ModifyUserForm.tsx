@@ -39,8 +39,8 @@ export default function ModifyUserForm({
         />
       </div>
       <div className="button-group">
-        <button type="submit" className="delete-button">
-          Borrar
+        <button type="submit" className="modify-button">
+          Modificar
         </button>
         <ReturnButton />
       </div>

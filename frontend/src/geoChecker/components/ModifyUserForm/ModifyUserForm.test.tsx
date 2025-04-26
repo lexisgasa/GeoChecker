@@ -36,18 +36,18 @@ describe("Given the component ModifyUserForm", () => {
       expect(userIdField).toBeInTheDocument();
     });
 
-    test("Then it should show the buttons with the text 'Borrar' and 'Volver'", () => {
-      const deleteButtonText = /borrar/i;
+    test("Then it should show the buttons with the text 'Modificar' and 'Volver'", () => {
+      const modifyButtonText = /modificar/i;
       const returnButtonText = /volver/i;
 
-      const deleteButton = screen.getByRole("button", {
-        name: deleteButtonText,
+      const modifyButton = screen.getByRole("button", {
+        name: modifyButtonText,
       });
       const returnButton = screen.getByRole("button", {
         name: returnButtonText,
       });
 
-      expect(deleteButton).toBeInTheDocument();
+      expect(modifyButton).toBeInTheDocument();
       expect(returnButton).toBeInTheDocument();
     });
   });

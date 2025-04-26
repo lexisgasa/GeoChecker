@@ -10,7 +10,7 @@ const ModifyUser = (): React.ReactElement => {
   return (
     <>
       {/* // TODO LOGICA breadcrumbs */}
-      <h1>Borrar Usuario</h1>
+      <h1>Modificar Usuario</h1>
       <ModifyUserForm userData={userData} setUserData={setUserData} />
     </>
   );
