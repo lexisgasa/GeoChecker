@@ -69,6 +69,55 @@ button {
   margin-bottom: 12px;
 }
 
+
+.form-group {
+  margin-bottom: 2rem;
+
+  & label {
+      display: block;
+      margin-bottom: 0.75rem;
+  }
+
+  & input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--grey);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:focus {
+          outline: none;
+          border-color: var(--main);
+      }
+  }
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: var(--grey);
+  transition: color 0.3s ease;
+  
+  &:hover {
+      cursor: pointer;
+      color: var(--main);
+  }
+}
+
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
 .back-button {
   background-color: #6c757d;
   color: white;
