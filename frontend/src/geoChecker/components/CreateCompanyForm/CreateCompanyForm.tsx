@@ -30,7 +30,7 @@ export default function CreateCompanyForm({
   return (
     <form onSubmit={handleCreateCompany}>
       <div className="form-group">
-        <label htmlFor="name">Introduce la empresa</label>
+        <label htmlFor="name">Introduce el nombre de empresa</label>
         <input
           type="text"
           id="name"
