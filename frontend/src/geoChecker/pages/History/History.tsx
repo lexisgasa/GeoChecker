@@ -4,8 +4,8 @@ import { ActionType } from "../../types";
 
 const History = (): React.ReactElement => {
   const actions: ActionType[] = [
-    { id: 1, name: "Registro mensual", path: "/admin-users" },
-    { id: 2, name: "Detalle de registro", path: "/admin-companies" },
+    { id: 1, name: "Registro mensual", path: "/monthly-history" },
+    { id: 2, name: "Detalle de registro", path: "/detail-history" },
   ];
 
   return (
