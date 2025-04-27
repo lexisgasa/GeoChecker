@@ -1,7 +1,6 @@
-import React from "react";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
 
-const Review: React.FC = () => {
+const Review = (): React.ReactElement => {
   return (
     <>
       <h2>Enviar revisión</h2>
