@@ -4,6 +4,16 @@ import AdminPageUserActions from "./AdminPageUserActions";
 
 describe("Given the AdminPageUserActions component", () => {
   describe("When it is rendered", () => {
+    test("Then it should display 'Acción de usuarios' inside a heading", () => {
+      const titleText = /acción de usuarios/i;
+
+      renderWithRouter(<AdminPageUserActions />);
+
+      const title = screen.getByRole("heading", { name: titleText });
+
+      expect(title).toBeInTheDocument();
+    });
+
     test("Then it should show the actions 'Crear usuario', 'Modificar usuario' and 'Eliminar usuario'", () => {
       const createUserText = /crear usuario/i;
       const modifyUserText = /modificar usuario/i;
@@ -24,6 +34,18 @@ describe("Given the AdminPageUserActions component", () => {
       expect(createUser).toBeInTheDocument();
       expect(modifyUser).toBeInTheDocument();
       expect(deleteUser).toBeInTheDocument();
+    });
+
+    test("Then it should show a button with the text 'Volver'", () => {
+      const returnButtonText = /volver/i;
+
+      renderWithRouter(<AdminPageUserActions />);
+
+      const returnButton = screen.getByRole("button", {
+        name: returnButtonText,
+      });
+
+      expect(returnButton).toBeInTheDocument();
     });
   });
 });

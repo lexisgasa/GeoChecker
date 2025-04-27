@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router";
 import Actions from "../../components/Actions/Actions";
 import { ActionType } from "../../types";
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 
 const AdminPageUserActions = (): React.ReactElement => {
-  const navigate = useNavigate();
-
   const actions: ActionType[] = [
     { id: 1, name: "Crear usuario", path: "/create-user" },
     { id: 2, name: "Modificar usuario", path: "/modify-user" },
@@ -20,13 +18,7 @@ const AdminPageUserActions = (): React.ReactElement => {
           <Actions key={action.id} {...action} />
         ))}
       </ul>
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className="back-button"
-      >
-        Volver
-      </button>
+      <ReturnButton />
     </>
   );
 };
