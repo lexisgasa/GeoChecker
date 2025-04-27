@@ -7,7 +7,7 @@ const Review: React.FC = () => {
       <h2>Enviar revisión</h2>
       <div className="general-form">
         <p>
-          Si ha habido algún error o deseas hacer una correción del tiempo
+          Si ha habido algún error o deseas hacer una corrección del tiempo
           puedes enviar una petición de revisión a tu superior rellenando los
           siguientes datos
         </p>
