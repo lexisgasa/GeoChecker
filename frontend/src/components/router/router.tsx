@@ -21,6 +21,7 @@ import CreateCompany from "../../geoChecker/pages/CreateCompany/CreateCompany";
 import ModifyCompany from "../../geoChecker/pages/ModifyCompany/ModifyCompany";
 import ModifyCompanyNewData from "../../geoChecker/pages/ModifyCompanyNewData/ModifyCompanyNewData";
 import DeleteCompany from "../../geoChecker/pages/DeleteCompany/DeleteCompany";
+import CheckIn from "../../geoChecker/pages/CheckIn/CheckIn";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route index element={<RoleSelectionPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="contact" element={<ContactPage />} />
+      <Route path="check-in" element={<CheckIn />} />
       <Route path="worker" element={<WorkerPage />} />
       <Route path="supervisor" element={<SupervisorPage />} />
       <Route path="admin" element={<AdminPage />} />
