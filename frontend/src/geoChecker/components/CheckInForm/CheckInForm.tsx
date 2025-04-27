@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 
 interface CheckInFormData {
   entryTime: string;
@@ -50,6 +51,12 @@ const CheckInForm = () => {
           onChange={handleChange}
           rows={5}
         />
+      </div>
+      <div className="button-group">
+        <button type="submit" className="action-button">
+          Check in
+        </button>
+        <ReturnButton />
       </div>
     </form>
   );

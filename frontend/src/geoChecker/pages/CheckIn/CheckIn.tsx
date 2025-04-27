@@ -1,4 +1,3 @@
-import ReturnButton from "../../../components/Buttons/ReturnButton";
 import CheckInForm from "../../components/CheckInForm/CheckInForm";
 
 const CheckIn = () => {
@@ -11,12 +10,6 @@ const CheckIn = () => {
           escribir un comentario
         </p>
         <CheckInForm />
-        <div className="button-group">
-          <button type="submit" className="action-button">
-            Check in
-          </button>
-          <ReturnButton />
-        </div>
       </div>
     </>
   );

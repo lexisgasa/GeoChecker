@@ -25,6 +25,21 @@ describe("Given the component CheckInForm", () => {
     });
   });
 
+  test("Then it should show the buttons with the text 'Check in' and 'Volver'", () => {
+    const sendButtonText = /check in/i;
+    const returnButtonText = /volver/i;
+
+    const sendButton = screen.getByRole("button", {
+      name: sendButtonText,
+    });
+    const returnButton = screen.getByRole("button", {
+      name: returnButtonText,
+    });
+
+    expect(sendButton).toBeInTheDocument();
+    expect(returnButton).toBeInTheDocument();
+  });
+
   describe("When the user types '10:30' in 'Hora de entrada' field", () => {
     test("Then it should show the time '10:30' inside the field", async () => {
       const entryTime = screen.getByLabelText(entryTimeText);
