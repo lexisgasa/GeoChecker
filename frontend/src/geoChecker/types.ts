@@ -30,3 +30,7 @@ export interface ActionType {
   path: string;
 }
 
+export interface CompanyData {
+  name: string;
+}
+
