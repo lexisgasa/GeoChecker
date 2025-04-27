@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
+import { useNavigate } from "react-router-dom";
 
 interface CheckInFormData {
   entryTime: string;
@@ -7,6 +8,7 @@ interface CheckInFormData {
 }
 
 const CheckInForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<CheckInFormData>({
     entryTime: "",
     comment: "",
@@ -14,8 +16,9 @@ const CheckInForm = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // TODO: logica
-    console.log("Check in:", formData);
+    navigate("/checkin-confirmation", {
+      state: { entryTime: formData.entryTime },
+    });
   };
 
   const handleChange = (
@@ -28,7 +31,7 @@ const CheckInForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="check-in-form">
+    <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="entryTime">Hora de entrada</label>
         <input
