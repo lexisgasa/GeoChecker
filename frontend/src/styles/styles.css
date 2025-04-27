@@ -150,3 +150,12 @@ button {
     background-color: var(--main-hover);
   }
 }
+
+.delete-button {
+  color: var(--bright);
+  background-color: var(--important);
+
+  &:hover {
+    background-color: var(--important-hover);
+  }
+}

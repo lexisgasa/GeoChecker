@@ -3,7 +3,6 @@ import ReturnButton from "../../../components/Buttons/ReturnButton";
 import { ModifyUserData } from "../../types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./DeleteUserForm.css";
 
 interface DeleteUserDataProps {
   userData: ModifyUserData;
