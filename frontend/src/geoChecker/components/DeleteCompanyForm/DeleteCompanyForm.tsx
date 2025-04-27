@@ -1,30 +1,32 @@
 import { useState } from "react";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
-import { ModifyUserData } from "../../types";
+import { ModifyCompanyData } from "../../types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface DeleteUserDataProps {
-  userData: ModifyUserData;
-  setUserData: React.Dispatch<React.SetStateAction<ModifyUserData>>;
+interface DeleteCompanyDataProps {
+  companyData: ModifyCompanyData;
+  setCompanyData: React.Dispatch<React.SetStateAction<ModifyCompanyData>>;
 }
 
-export default function DeleteUserForm({
-  userData,
-  setUserData,
-}: DeleteUserDataProps) {
+export default function DeleteCompanyForm({
+  companyData,
+  setCompanyData,
+}: DeleteCompanyDataProps) {
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const handleDeleteUser = async (event: React.FormEvent) => {
+  const handleDeleteCompany = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!showConfirmation) {
       showDeleteConfirmationToast();
     }
   };
 
-  const handleUserData = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setUserData((currentUserData) => ({
-      ...currentUserData,
+  const handleCompanyData = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setCompanyData((currentCompanyData) => ({
+      ...currentCompanyData,
       [event.target.id]: event.target.value,
     }));
   };
@@ -33,8 +35,8 @@ export default function DeleteUserForm({
     toast(
       <div className="confirmation-toast">
         <p>
-          ¿Estás seguro de que quieres borrar el usuario con la ID{" "}
-          <strong>{userData.userId}</strong>?
+          ¿Estás seguro de que quieres borrar la empresa con la ID{" "}
+          <strong>{companyData.companyId}</strong>?
         </p>
         <div className="toast-buttons">
           <button
@@ -52,23 +54,23 @@ export default function DeleteUserForm({
   };
 
   const handleConfirmDelete = async () => {
-    console.log("User deleted:", userData);
+    console.log("Company deleted:", companyData);
     toast.dismiss();
-    toast.success("Usuario borrado correctamente");
+    toast.success("Empresa borrada correctamente");
     setShowConfirmation(false);
   };
 
   return (
     <>
       <ToastContainer />
-      <form onSubmit={handleDeleteUser}>
+      <form onSubmit={handleDeleteCompany}>
         <div className="form-group">
-          <label htmlFor="userId">ID</label>
+          <label htmlFor="companyId">ID</label>
           <input
             type="number"
-            id="userId"
-            value={userData.userId}
-            onChange={handleUserData}
+            id="companyId"
+            value={companyData.companyId}
+            onChange={handleCompanyData}
             required
           />
         </div>
