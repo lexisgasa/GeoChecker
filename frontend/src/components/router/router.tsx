@@ -26,6 +26,7 @@ import CheckInConfirmation from "../../geoChecker/pages/CheckInConfirmation/Chec
 import CheckOut from "../../geoChecker/pages/CheckOut/CheckOut";
 import CheckOutConfirmation from "../../geoChecker/pages/CheckOutConfirmation/CheckOutConfirmation";
 import Review from "../../geoChecker/pages/Review/Review";
+import History from "../../geoChecker/pages/History/History";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
       <Route path="checkout" element={<CheckOut />} />
       <Route path="checkout-confirmation" element={<CheckOutConfirmation />} />
       <Route path="review" element={<Review />} />
+      <Route path="history" element={<History />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
