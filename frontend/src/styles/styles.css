@@ -42,7 +42,6 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 6px;
-  padding: 0.75rem;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
@@ -127,6 +126,10 @@ button {
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+
+  & button {
+    padding: 0.75rem;
+  }
 }
 
 .action-button {
@@ -135,16 +138,5 @@ button {
 
   &:hover {
     background-color: var(--main-hover);
-  }
-}
-
-.delete-button {
-  flex: 1;
-  transition: background-color 0.3s ease;
-  color: var(--bright);
-  background-color: var(--important);
-
-  &:hover {
-    background-color: var(--important-hover);
   }
 }

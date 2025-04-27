@@ -1,6 +1,7 @@
 .back-button {
   background-color: var(--grey);
   color: white;
+  padding: 0.75rem 3rem;
 
   &:hover {
     background-color: var(--grey-hover);
