@@ -38,3 +38,9 @@ export interface ModifyCompanyData {
   companyId: string;
 }
 
+export interface ReviewFormData {
+  date: string;
+  entryTime: string;
+  exitTime: string; 
+  comment: string;
+}
