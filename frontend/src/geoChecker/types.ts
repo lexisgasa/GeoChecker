@@ -34,3 +34,7 @@ export interface CompanyData {
   name: string;
 }
 
+export interface ModifyCompanyData {
+  companyId: string;
+}
+

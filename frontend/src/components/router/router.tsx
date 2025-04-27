@@ -18,6 +18,7 @@ import ModifyUser from "../../geoChecker/pages/ModifyUser/ModifyUser";
 import ModifyUserNewData from "../../geoChecker/pages/ModifyUserNewData/ModifyUserNewData";
 import DeleteUser from "../../geoChecker/pages/DeleteUser/DeleteUser";
 import CreateCompany from "../../geoChecker/pages/CreateCompany/CreateCompany";
+import ModifyCompany from "../../geoChecker/pages/ModifyCompany/ModifyCompany";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
       <Route path="delete-user" element={<DeleteUser />} />
       <Route path="admin-companies" element={<AdminPageCompanyActions />} />
       <Route path="create-company" element={<CreateCompany />} />
+      <Route path="modify-company" element={<ModifyCompany />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
