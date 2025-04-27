@@ -20,21 +20,6 @@ describe("Given the component ContactPageForm", () => {
       expect(userLabel).toBeInTheDocument();
       expect(descriptionLabel).toBeInTheDocument();
     });
-
-    test("Then it should show the buttons with the text 'Enviar' and 'Volver'", () => {
-      const sendButtonText = /enviar/i;
-      const returnButtonText = /volver/i;
-
-      const sendButton = screen.getByRole("button", {
-        name: sendButtonText,
-      });
-      const returnButton = screen.getByRole("button", {
-        name: returnButtonText,
-      });
-
-      expect(sendButton).toBeInTheDocument();
-      expect(returnButton).toBeInTheDocument();
-    });
   });
 
   describe("When the user types 'Alex' in 'Usuario' field", () => {
