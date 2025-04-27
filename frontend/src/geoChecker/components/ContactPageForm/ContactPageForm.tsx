@@ -1,7 +1,5 @@
 import { ContactFormData } from "../../types";
 import { useState } from "react";
-import ReturnButton from "../../../components/Buttons/ReturnButton";
-import "./ContactPageForm.css";
 
 export default function ContactPageForm() {
   const [contactFormData, setContactFormData] = useState<ContactFormData>({
@@ -45,12 +43,6 @@ export default function ContactPageForm() {
           required
           rows={5}
         />
-      </div>
-      <div className="button-group">
-        <button type="submit" className="action-button">
-          Enviar
-        </button>
-        <ReturnButton />
       </div>
     </form>
   );

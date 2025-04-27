@@ -1,3 +1,4 @@
+import ReturnButton from "../../../components/Buttons/ReturnButton";
 import ContactPageForm from "../../components/ContactPageForm/ContactPageForm";
 
 const ContactPage = () => {
@@ -10,6 +11,12 @@ const ContactPage = () => {
           contacta al administrador:
         </p>
         <ContactPageForm />
+        <div className="button-group">
+          <button type="submit" className="action-button">
+            Enviar
+          </button>
+          <ReturnButton />
+        </div>
       </div>
     </>
   );
