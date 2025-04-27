@@ -12,6 +12,7 @@ import ContactPage from "../../geoChecker/pages/ContactPage/ContactPage";
 import SupervisorPage from "../../geoChecker/pages/SupervisorPage/SupervisorPage";
 import AdminPage from "../../geoChecker/pages/AdminPage/AdminPage";
 import AdminPageUserActions from "../../geoChecker/pages/AdminPageUserActions/AdminPageUserActions";
+import AdminPageCompanyActions from "../../geoChecker/pages/AdminPageCompanyActions/AdminPageCompanyActions";
 import CreateUser from "../../geoChecker/pages/CreateUser/CreateUser";
 import ModifyUser from "../../geoChecker/pages/ModifyUser/ModifyUser";
 import ModifyUserNewData from "../../geoChecker/pages/ModifyUserNewData/ModifyUserNewData";
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="modify-user" element={<ModifyUser />} />
       <Route path="modify-user-new" element={<ModifyUserNewData />} />
       <Route path="delete-user" element={<DeleteUser />} />
+      <Route path="admin-companies" element={<AdminPageCompanyActions />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
