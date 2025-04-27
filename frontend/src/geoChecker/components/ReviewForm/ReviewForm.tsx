@@ -38,7 +38,7 @@ const ReviewForm = (): React.ReactElement => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="time">Check in</label>
+        <label htmlFor="entryTime">Check in</label>
         <input
           type="time"
           id="entryTime"
@@ -49,7 +49,7 @@ const ReviewForm = (): React.ReactElement => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="time">Check out</label>
+        <label htmlFor="exitTime">Check out</label>
         <input
           type="time"
           id="exitTime"
