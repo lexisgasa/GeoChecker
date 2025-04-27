@@ -29,12 +29,12 @@ describe("Given the component ModifyUserNewDataForm", () => {
     renderWithRouter(<Wrapper />);
   });
 
-  const nameLabelText = /nombre/i;
-  const passwordLabelText = /contraseña/i;
-  const companyLabelText = /empresa/i;
+  const nameLabelText = /nuevo nombre/i;
+  const passwordLabelText = /nueva contraseña/i;
+  const companyLabelText = /nueva empresa/i;
 
   describe("When it is rendered", () => {
-    test("Then it should show the fields 'Nombre', 'Contraseña' and 'Empresa'", () => {
+    test("Then it should show the fields 'Nuevo nombre', 'Nueva contraseña' and 'Nueva empresa'", () => {
       const nameField = screen.getByLabelText(nameLabelText);
       const passwordField = screen.getByLabelText(passwordLabelText);
       const companyField = screen.getByLabelText(companyLabelText);
@@ -44,8 +44,8 @@ describe("Given the component ModifyUserNewDataForm", () => {
       expect(companyField).toBeInTheDocument();
     });
 
-    test("Then it should show the buttons with the text 'Actualizar' and 'Volver'", () => {
-      const updateButtonText = /actualizar/i;
+    test("Then it should show the buttons with the text 'Modificar' and 'Volver'", () => {
+      const updateButtonText = /modificar/i;
       const returnButtonText = /volver/i;
 
       const updateButton = screen.getByRole("button", {
