@@ -1,0 +1,9 @@
+.delete-button {
+  transition: background-color 0.3s ease;
+  color: var(--bright);
+  background-color: var(--important);
+
+  &:hover {
+    background-color: var(--important-hover);
+  }
+}
