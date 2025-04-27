@@ -1,14 +1,15 @@
 :root {
-  --main: #007bff;
-  --main-hover: #004bbd;
+  --main: #0056b3;
+  --main-hover: #00346b;
   --dark: #121212;
   --grey: #545b62;
   --grey-hover: #333;
   --bright: #fff;
   --background: #f5f5f5;
-  --important: #e53935;
-  --important-hover: #c62828;
-  --clear: #00a86b;
+  --important: #b01917;
+  --important-hover: #741211;
+  --confirmation: #006642;
+  --confirmation-hover: #00422b;
 }
 
 * {
@@ -157,5 +158,14 @@ button {
 
   &:hover {
     background-color: var(--important-hover);
+  }
+}
+
+.confirmation-button {
+  color: var(--bright);
+  background-color: var(--confirmation);
+
+  &:hover {
+    background-color: var(--confirmation-hover);
   }
 }

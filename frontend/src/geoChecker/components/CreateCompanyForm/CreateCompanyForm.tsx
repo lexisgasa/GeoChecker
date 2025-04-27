@@ -43,7 +43,7 @@ export default function CreateCompanyForm({
         <div className="toast-buttons">
           <button
             onClick={() => handleConfirmCreate()}
-            className="action-button"
+            className="confirmation-button"
           >
             Crear
           </button>
@@ -77,7 +77,7 @@ export default function CreateCompanyForm({
           />
         </div>
         <div className="button-group">
-          <button type="submit" className="action-button">
+          <button type="submit" className="confirmation-button">
             Crear
           </button>
           <ReturnButton />
