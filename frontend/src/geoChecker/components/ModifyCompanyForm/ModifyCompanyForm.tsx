@@ -32,7 +32,7 @@ export default function ModifyCompanyForm({
       <div className="form-group">
         <label htmlFor="companyId">ID</label>
         <input
-          type="text"
+          type="number"
           id="companyId"
           value={companyData.companyId}
           onChange={handleCompanyData}
