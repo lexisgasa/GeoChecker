@@ -22,6 +22,21 @@ describe("Given the component ContactPageForm", () => {
     });
   });
 
+  test("Then it should show the buttons with the text 'Enviar' and 'Volver'", () => {
+    const sendButtonText = /enviar/i;
+    const returnButtonText = /volver/i;
+
+    const sendButton = screen.getByRole("button", {
+      name: sendButtonText,
+    });
+    const returnButton = screen.getByRole("button", {
+      name: returnButtonText,
+    });
+
+    expect(sendButton).toBeInTheDocument();
+    expect(returnButton).toBeInTheDocument();
+  });
+
   describe("When the user types 'Alex' in 'Usuario' field", () => {
     test("Then it should show the word 'Alex' inside the field", async () => {
       const userLabel = screen.getByLabelText(userLabelText);
