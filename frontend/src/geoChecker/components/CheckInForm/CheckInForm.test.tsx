@@ -48,6 +48,12 @@ describe("Given the component CheckInForm", () => {
 
       expect(entryTime).toHaveValue("10:30");
     });
+
+    test("Then the entry time field should be disabled", () => {
+      const exitTime = screen.getByLabelText(exitTimeText);
+
+      expect(exitTime).toBeDisabled();
+    });
   });
 
   describe("When the user types 'Me encontraba mal' in 'Comentario' field", () => {

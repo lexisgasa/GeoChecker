@@ -23,6 +23,8 @@ import ModifyCompanyNewData from "../../geoChecker/pages/ModifyCompanyNewData/Mo
 import DeleteCompany from "../../geoChecker/pages/DeleteCompany/DeleteCompany";
 import CheckIn from "../../geoChecker/pages/CheckIn/CheckIn";
 import CheckInConfirmation from "../../geoChecker/pages/CheckInConfirmation/CheckInConfirmation";
+import CheckOut from "../../geoChecker/pages/CheckOut/CheckOut";
+import CheckOutConfirmation from "../../geoChecker/pages/CheckOutConfirmation/CheckOutConfirmation";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,6 +47,8 @@ const router = createBrowserRouter(
       <Route path="modify-company" element={<ModifyCompany />} />
       <Route path="modify-company-new" element={<ModifyCompanyNewData />} />
       <Route path="delete-company" element={<DeleteCompany />} />
+      <Route path="checkout" element={<CheckOut />} />
+      <Route path="checkout-confirmation" element={<CheckOutConfirmation />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
