@@ -1,8 +1,7 @@
 import React from "react";
-import "./DetailHistory.css";
 import DetailHistoryForm from "../../components/DetailHistoryForm/DetailHistoryForm";
 
-const DetailHistory: React.FC = () => {
+const DetailHistory = (): React.ReactElement => {
   return (
     <>
       <h2>Detalle de registro</h2>
