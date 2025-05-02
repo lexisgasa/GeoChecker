@@ -30,6 +30,7 @@ import History from "../../geoChecker/pages/History/History";
 import MonthlyHistory from "../../geoChecker/pages/MonthlyHistory/MonthlyHistory";
 import DetailHistory from "../../geoChecker/pages/DetailHistory/DetailHistory";
 import WorkerReview from "../../geoChecker/pages/WorkerReview/WorkerReview";
+import WorkerReviewActions from "../../geoChecker/pages/WorkerReviewActions/WorkerReviewActions";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,8 +42,8 @@ const router = createBrowserRouter(
       <Route path="checkin-confirmation" element={<CheckInConfirmation />} />
       <Route path="worker" element={<WorkerPage />} />
       <Route path="supervisor" element={<SupervisorPage />} />
-      <Route path="worker" element={<WorkerPage />} />
       <Route path="worker-review" element={<WorkerReview />} />
+      <Route path="worker-review-actions" element={<WorkerReviewActions />} />
       <Route path="admin" element={<AdminPage />} />
       <Route path="admin-users" element={<AdminPageUserActions />} />
       <Route path="create-user" element={<CreateUser />} />
