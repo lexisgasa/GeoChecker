@@ -2,11 +2,11 @@ import { screen } from "@testing-library/react";
 import { renderWithRouter } from "../../../render-utils";
 import DeleteUserForm from "./DeleteUserForm";
 import userEvent from "@testing-library/user-event";
-import { ModifyUserData } from "../../types";
+import { IdUserData } from "../../types";
 import { useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setUserData: React.Dispatch<React.SetStateAction<ModifyUserData>>;
+let setUserData: React.Dispatch<React.SetStateAction<IdUserData>>;
 
 describe("Given the component DeleteUserForm", () => {
   const user = userEvent.setup();
@@ -15,7 +15,7 @@ describe("Given the component DeleteUserForm", () => {
     vi.clearAllMocks();
 
     function Wrapper() {
-      const [state, setState] = useState<ModifyUserData>({
+      const [state, setState] = useState<IdUserData>({
         userId: "",
       });
 
