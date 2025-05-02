@@ -1,9 +1,9 @@
 import ReturnButton from "../../../components/Buttons/ReturnButton";
-import { ModifyUserData } from "../../types";
+import { IdUserData } from "../../types";
 
 interface ModifyUserDataProps {
-  userData: ModifyUserData;
-  setUserData: React.Dispatch<React.SetStateAction<ModifyUserData>>;
+  userData: IdUserData;
+  setUserData: React.Dispatch<React.SetStateAction<IdUserData>>;
 }
 
 export default function ModifyUserForm({
@@ -26,7 +26,7 @@ export default function ModifyUserForm({
   };
 
   return (
-    <form onSubmit={handleDeleteUser} className="modify-user-form">
+    <form onSubmit={handleDeleteUser}>
       <div className="form-group">
         <label htmlFor="userId">ID</label>
         <input

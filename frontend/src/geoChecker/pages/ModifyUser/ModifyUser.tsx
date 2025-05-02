@@ -1,16 +1,16 @@
 import { useState } from "react";
 import ModifyUserForm from "../../components/ModifyUserForm/ModifyUserForm";
-import { ModifyUserData } from "../../types";
+import { IdUserData } from "../../types";
 
 const ModifyUser = (): React.ReactElement => {
-  const [userData, setUserData] = useState<ModifyUserData>({
+  const [userData, setUserData] = useState<IdUserData>({
     userId: "",
   });
 
   return (
     <>
       {/* // TODO LOGICA breadcrumbs */}
-      <h1>Modificar Usuario</h1>
+      <h2>Modificar Usuario</h2>
       <div className="general-form">
         <p>Introduce el número de identificación del usuario</p>
         <ModifyUserForm userData={userData} setUserData={setUserData} />

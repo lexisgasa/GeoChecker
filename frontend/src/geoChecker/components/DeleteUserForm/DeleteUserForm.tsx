@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
-import { ModifyUserData } from "../../types";
+import { IdUserData } from "../../types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface DeleteUserDataProps {
-  userData: ModifyUserData;
-  setUserData: React.Dispatch<React.SetStateAction<ModifyUserData>>;
+  userData: IdUserData;
+  setUserData: React.Dispatch<React.SetStateAction<IdUserData>>;
 }
 
 export default function DeleteUserForm({

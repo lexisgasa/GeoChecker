@@ -9,7 +9,7 @@ export interface UserData {
   password: string;
 }
 
-export interface ModifyUserData {
+export interface IdUserData {
   userId: string;
 }
 
