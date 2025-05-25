@@ -1,9 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "start": "node --env-file=.env .",
+    "start:dev": "node --env-file=.env --watch ."
   },
   "keywords": [],
   "author": "",
@@ -11,7 +15,9 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.27.0",
+    "@types/express": "^5.0.2",
     "eslint": "^9.27.0",
+    "express": "^5.1.0",
     "globals": "^16.1.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.1"
