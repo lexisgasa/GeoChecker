@@ -4,10 +4,12 @@ import AdminPageUserActions from "./AdminPageUserActions";
 
 describe("Given the AdminPageUserActions component", () => {
   describe("When it is rendered", () => {
+    beforeEach(() => {
+      renderWithRouter(<AdminPageUserActions />);
+    });
+
     test("Then it should display 'Acción de usuarios' inside a heading", () => {
       const titleText = /acción de usuarios/i;
-
-      renderWithRouter(<AdminPageUserActions />);
 
       const title = screen.getByRole("heading", { name: titleText });
 
@@ -18,8 +20,6 @@ describe("Given the AdminPageUserActions component", () => {
       const createUserText = /crear usuario/i;
       const modifyUserText = /modificar usuario/i;
       const deleteUserText = /eliminar usuario/i;
-
-      renderWithRouter(<AdminPageUserActions />);
 
       const createUser = screen.getByRole("link", {
         name: createUserText,
@@ -38,8 +38,6 @@ describe("Given the AdminPageUserActions component", () => {
 
     test("Then it should show a button with the text 'Volver'", () => {
       const returnButtonText = /volver/i;
-
-      renderWithRouter(<AdminPageUserActions />);
 
       const returnButton = screen.getByRole("button", {
         name: returnButtonText,
