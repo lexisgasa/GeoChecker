@@ -7,16 +7,18 @@ import "react-toastify/dist/ReactToastify.css";
 interface CreateUserDataProps {
   userData: UserFullData;
   setUserData: React.Dispatch<React.SetStateAction<UserFullData>>;
+  onSubmit: (userData: UserFullData) => Promise<void>;
 }
 
-export default function CreateUserForm({
+const CreateUserForm = ({
   userData,
   setUserData,
-}: CreateUserDataProps) {
+  onSubmit,
+}: CreateUserDataProps): React.ReactElement => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const handleCreateUser = async (event: React.FormEvent) => {
+  const handleCreateUser = (event: React.FormEvent): void => {
     event.preventDefault();
     if (!showConfirmation) {
       showCreateConfirmationToast();
@@ -24,19 +26,17 @@ export default function CreateUserForm({
   };
 
   const handleUserData = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setUserData((currentUserData) => {
-      return {
-        ...currentUserData,
-        [event.target.id]: event.target.value,
-      };
-    });
+    setUserData((currentUserData) => ({
+      ...currentUserData,
+      [event.target.id]: event.target.value,
+    }));
   };
 
   const togglePasswordVisibility = (): void => {
     setShowPassword(!showPassword);
   };
 
-  const showCreateConfirmationToast = () => {
+  const showCreateConfirmationToast = (): void => {
     toast(
       <div className="confirmation-toast">
         <p>
@@ -58,11 +58,16 @@ export default function CreateUserForm({
     );
   };
 
-  const handleConfirmCreate = async () => {
-    console.log("User created:", userData);
-    toast.dismiss();
-    toast.success("Usuario creado correctamente");
-    setShowConfirmation(false);
+  const handleConfirmCreate = async (): Promise<void> => {
+    try {
+      await onSubmit(userData);
+      toast.dismiss();
+      toast.success("Usuario creado correctamente");
+      setShowConfirmation(false);
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Error al crear el usuario");
+    }
   };
 
   return (
@@ -148,4 +153,6 @@ export default function CreateUserForm({
       </form>
     </>
   );
-}
+};
+
+export default CreateUserForm;
