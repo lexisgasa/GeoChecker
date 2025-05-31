@@ -2,13 +2,14 @@ import express, { Request, Response, NextFunction } from "express";
 import morgan from "morgan";
 import cors from "cors";
 import healthCheck from "./healtCheck/healthCheck.js";
-import notFoundError from "./error/notFoundError/notFoundError";
+import notFoundError from "./error/_tmp_notfounderror/notFoundError.js";
 import generalError from "./error/generalError/generalError.js";
 import { v4 as uuidv4 } from 'uuid';
 import User from "../geoChecker/model/User.js";
 import authRoutes from "../geoChecker/router/router.js";
 import bcrypt from "bcrypt";
 import { authenticate, isAdmin } from "../middleware/auth.js";
+
 
 const app = express();
 
