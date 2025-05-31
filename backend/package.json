@@ -7,7 +7,8 @@
     "build": "tsc",
     "build:dev": "tsc -w",
     "start": "node --env-file=.env .",
-    "start:dev": "node --env-file=.env --watch ."
+    "start:dev": "node --env-file=.env --watch .",
+    "render": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
