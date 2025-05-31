@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import morgan from "morgan";
 import cors from "cors";
 import healthCheck from "./healtCheck/healthCheck.js";
-import notFoundError from "./error/notFoundError/notFoundError.js";
+import notFoundError from "./error/notFoundError/notFoundError";
 import generalError from "./error/generalError/generalError.js";
 import { v4 as uuidv4 } from 'uuid';
 import User from "../geoChecker/model/User.js";
