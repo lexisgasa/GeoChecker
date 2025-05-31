@@ -5,9 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { renderWithRouter } from "../../../render-utils";
 import { useState } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setUserData: React.Dispatch<React.SetStateAction<UserData>>;
-
 describe("Given the LoginPageForm component", () => {
   const userFieldText = /usuario/i;
   const passwordFieldText = /contraseña/i;
@@ -23,8 +20,6 @@ describe("Given the LoginPageForm component", () => {
         username: "",
         password: "",
       });
-
-      setUserData = setState;
 
       return <LoginPageForm userData={state} setUserData={setState} />;
     }

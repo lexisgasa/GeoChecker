@@ -5,9 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { CompanyData } from "../../types";
 import { useState } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setCompanyData: React.Dispatch<React.SetStateAction<CompanyData>>;
-
 describe("Given the component ModifyCompanyNewDataForm", () => {
   const user = userEvent.setup();
 
@@ -18,8 +15,6 @@ describe("Given the component ModifyCompanyNewDataForm", () => {
       const [state, setState] = useState<CompanyData>({
         name: "",
       });
-
-      setCompanyData = setState;
 
       return (
         <ModifyCompanyNewDataForm
