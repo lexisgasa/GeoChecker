@@ -5,9 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { UserFullData } from "../../types";
 import { useState } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setUserData: React.Dispatch<React.SetStateAction<UserFullData>>;
-
 describe("Given the component ModifyUserNewDataForm", () => {
   const user = userEvent.setup();
 
@@ -20,8 +17,6 @@ describe("Given the component ModifyUserNewDataForm", () => {
         name: "",
         password: "",
       });
-
-      setUserData = setState;
 
       return <ModifyUserNewDataForm userData={state} setUserData={setState} />;
     }
