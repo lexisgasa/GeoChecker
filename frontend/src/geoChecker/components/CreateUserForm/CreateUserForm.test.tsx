@@ -5,9 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { UserFullData } from "../../types";
 import { useState } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setUserData: React.Dispatch<React.SetStateAction<UserFullData>>;
-
 describe("Given the component CreateUserForm", () => {
   const user = userEvent.setup();
 
@@ -15,15 +12,21 @@ describe("Given the component CreateUserForm", () => {
     vi.clearAllMocks();
 
     function Wrapper() {
+      const mockOnSubmit = vi.fn();
+
       const [state, setState] = useState<UserFullData>({
         company: "",
         name: "",
         password: "",
       });
 
-      setUserData = setState;
-
-      return <CreateUserForm userData={state} setUserData={setState} />;
+      return (
+        <CreateUserForm
+          userData={state}
+          setUserData={setState}
+          onSubmit={mockOnSubmit}
+        />
+      );
     }
 
     renderWithRouter(<Wrapper />);
