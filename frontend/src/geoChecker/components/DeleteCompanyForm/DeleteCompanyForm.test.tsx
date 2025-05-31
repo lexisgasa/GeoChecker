@@ -5,9 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { ModifyCompanyData } from "../../types";
 import { useState } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let setCompanyData: React.Dispatch<React.SetStateAction<ModifyCompanyData>>;
-
 describe("Given the component DeleteCompanyForm", () => {
   const user = userEvent.setup();
 
@@ -18,8 +15,6 @@ describe("Given the component DeleteCompanyForm", () => {
       const [state, setState] = useState<ModifyCompanyData>({
         companyId: "",
       });
-
-      setCompanyData = setState;
 
       return (
         <DeleteCompanyForm companyData={state} setCompanyData={setState} />
