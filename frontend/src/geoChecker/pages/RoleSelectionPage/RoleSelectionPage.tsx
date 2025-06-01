@@ -3,9 +3,9 @@ import { RoleType } from "../../types";
 import "./RoleSelectionPage.css";
 
 const roles: RoleType[] = [
-  { id: 1, name: "Trabajador", path: "trabajador" },
+  { id: 1, name: "Trabajador", path: "worker" },
   { id: 2, name: "Supervisor", path: "supervisor" },
-  { id: 3, name: "Administrador", path: "administrador" },
+  { id: 3, name: "Administrador", path: "admin" },
 ];
 
 const RoleSelectionPage = (): React.ReactElement => {

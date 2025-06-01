@@ -6,7 +6,7 @@ const Role = ({ name, path }: RoleType): React.ReactElement => {
 
   const handleClick = (event: React.MouseEvent): void => {
     event.preventDefault();
-    navigate("/login");
+    navigate(`/login?redirect=${path}`);
   };
 
   return (

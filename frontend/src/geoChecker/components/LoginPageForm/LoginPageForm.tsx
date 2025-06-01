@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UserData } from "../../types";
 import ReturnButton from "../../../components/Buttons/ReturnButton";
 import { login } from "../../services/authService";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -21,6 +21,10 @@ export default function LoginPageForm({
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const params = new URLSearchParams(location.search);
+  const redirectPath = params.get("redirect") || "/admin";
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -30,7 +34,8 @@ export default function LoginPageForm({
       const response = await login(userData.username, userData.password);
       localStorage.setItem("token", response.token);
       toast.success("Inicio de sesión exitoso");
-      navigate("/admin");
+
+      navigate(`/${redirectPath}`);
     } catch {
       toast.error("Usuario o contraseña incorrectos");
     } finally {
